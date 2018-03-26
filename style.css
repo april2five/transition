@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arvo'), url(https://fonts.gstatic.com/s/arvo/v10/tDbD2oWUg0MKqScQ7Z7o_vo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Arvo Bold'), local('Arvo-Bold'), url(https://fonts.gstatic.com/s/arvo/v10/tDbM2oWUg0MKoZw1-LPK89D4hAA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arvo', serif;
+}
+
+
+/* LEFT MENU FOR BIGGER SCREEN*/
+.side{
+  position: fixed;
+  left: -16.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 20rem;
+  background-color: #F4B9B9;
+  z-index: 10;
+  transition: all 0.4s ease-out;
+  overflow: scroll;
+}
+
+.side:hover{
+  left: 0rem;
+  background-color: lightgray;
+}
+
+.side ul{
+  line-height: 1.5rem;
+  margin: 2rem 0.5rem;
+}
+
+.side ul li.menu-kind{
+  color: #E53030;
+}
+
+.side ul li:nth-child(2n+2){
+  color:#555;
+}
+
+.menu-btn img{
+  height: 6rem;
+  width: auto;
+  padding-right: 0.7rem;
+  filter: grayscale(100%) brightness(200%);
+}
+
+
+/* TOP MENU FOR SMALLER SCREEN*/
+
+@media only screen and (max-width:460px){
+  .side{
+    display: none;
+  }
+  .side2{
+    top: -30.4rem;
+  }
+  .main{
+    position: absolute;
+    left: 0rem;
+    top: 3rem;
+  }
+}
+@media only screen and (min-width:460px){
+  .side2{
+    top: -327rem;
+  }
+  .main{
+    position: absolute;
+    left: 3rem;
+    top: 0rem;
+  }
+}
+
+.side2{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-color: #F4B9B9;
+  z-index: 5;
+  transition: all 0.4s ease-out;
+}
+
+.side2:hover{
+  top: 0rem;
+  background-color: lightgray;
+}
+
+.side-menus2{
+  width: 24rem;;
+  margin: 0 auto;
+  height: auto;
+}
+
+.side-menus2 ul{
+  margin: 0.5rem;
+}
+
+.side2 ul li.menu-kind2{
+  color: #E53030;
+  display: block;
+}
+
+.side-menus2 ul li{
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+}
+
+.menu-btn2 img{
+  height: 4rem;
+  width: auto;
+  filter: grayscale(100%) brightness(200%);
+  transform: rotate(90deg);
+  margin: -0.5rem 0rem;
+}
+
+
+
+/* MAIN SECTION*/
+.main{
+  padding: 2rem;
+  background-color: gray;
+  width: 100%;
+  margin: 0 auto;
+}
